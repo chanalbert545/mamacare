@@ -1,0 +1,242 @@
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.breadcrumb-section {
+  background-image: url('https://mamacarenursery.kesug.com/wp-content/uploads/2023/10/breadcumb-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 0;
+  color: var(--white);
+  position: relative;
+}
+
+.breadcrumb-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(35, 42, 239, 0.95);
+}
+
+.breadcrumb-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--white);
+}
+
+.breadcrumb-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: rgb(255, 204, 0);
+}
+
+.breadcrumb-content p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.breadcrumb-content span {
+  margin: 0 0.35rem;
+  color: var(--theme-yellow);
+}
+
+
+.contact-cards .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: rgb(255, 208, 0);
+  border-radius: 14px;
+  padding: 2.25rem 1.75rem;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  border: 3px solid transparent;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: blue;
+}
+
+.card-icon img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0 auto 1.25rem;
+  color: blue;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: rgb(1, 55, 181);
+}
+
+.card p {
+  font-size: 1rem;
+  color: rgba(0, 145, 255, 0.75);
+  font-weight: 500;
+}
+
+.contact-main {
+  background: linear-gradient(95deg, #d40020, #e4004c);
+  padding: 3rem 0;
+}
+
+.submit-btn {
+  background: var(--theme-pink);
+  color: var(--white);
+  border: none;
+  border-radius: 999px;
+  padding: 0.85rem 2.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(232, 6, 85, 0.2);
+}
+
+.contact-map .page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  min-height: 420px;
+  border: 0;
+  border-radius: 16px;
+  box-shadow: var(--shadow-soft);
+}
+
+/* Outer container */
+.contact-container {
+  max-width: 550px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+/* Title */
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Form Styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Input Group */
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #ff0040;
+}
+
+.input-group input,
+.input-group textarea {
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: 0.2s ease-in-out;
+  outline: none;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #ff006a;
+  box-shadow: 0 0 8px rgba(0, 119, 255, 0.2);
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+/* Submit Button */
+.submit-btn {
+  padding: 14px;
+  font-size: 16px;
+  background: #ff0048;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+}
+
+.submit-btn:hover {
+  background: #005bd1;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .breadcrumb-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .breadcrumb-content h1 {
+    font-size: 2.25rem;
+  }
+
+  .contact-cards .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .breadcrumb-section {
+    padding: 3rem 0;
+  }
+
+  .card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .map-wrapper iframe {
+    min-height: 320px;
+  }
+}

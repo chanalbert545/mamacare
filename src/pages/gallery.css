@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+.gallery-page {
+  padding: 4rem 1.5rem 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Nunito', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.gallery-header {
+  text-align: center;
+  max-width: 100%;
+  width: 1900px;
+  height: 170px;
+  border-radius: 10px;
+  margin: 0 auto 2.5rem;
+  background: #002cdb;
+}
+
+.gallery-header h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.6rem;
+  margin-top: 1rem;
+  padding-top: 2rem;
+  color: #ffbf00;
+}
+
+.gallery-header p {
+  color: #ffffff;
+}
+
+.gallery-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.gallery-tab {
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  padding: 0.5rem 1.1rem;
+  background: #f9fafb;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease,
+    transform 0.1s ease;
+}
+
+.gallery-tab.is-active {
+  background: linear-gradient(135deg, #e20031, #e60050);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 10px 22px rgba(79, 70, 229, 0.25);
+  transform: translateY(-1px);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.25rem;
+}
+
+.gallery-item {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-media-wrapper {
+  position: relative;
+  padding-top: 70%;
+  overflow: hidden;
+}
+
+.gallery-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-meta {
+  padding: 0.85rem 1rem 1rem;
+}
+
+.gallery-meta h3 {
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
+.gallery-meta p {
+  margin: 0;
+  font-size: 0.6rem;
+  color: #4b5563;
+}
+
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.gallery-lightbox-inner {
+  position: relative;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 1rem;
+  background: #0f172a;
+  border-radius: 1rem;
+  padding: 1.5rem 1.5rem 1.75rem;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.9);
+}
+
+.gallery-lightbox-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(15, 23, 42, 0.85);
+  color: #e5e7eb;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-lightbox-media {
+  width: 100%;
+  max-height: min(80vh, 640px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #020617;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.gallery-lightbox-media img,
+.gallery-lightbox-media video {
+  max-width: 100%;
+  max-height: min(80vh, 640px);
+  object-fit: contain;
+}
+
+.gallery-lightbox-meta {
+  margin-top: 1rem;
+  color: #e5e7eb;
+}
+
+.gallery-lightbox-meta h2 {
+  margin-bottom: 0.35rem;
+  font-size: 1.25rem;
+}
+
+.gallery-lightbox-meta p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #cbd5f5;
+}
+
+.gallery-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #f9fafb;
+  border-radius: 1.5rem;
+  border: 1px dashed #e5e7eb;
+}
+
+.gallery-empty h2 {
+  margin-bottom: 0.5rem;
+}
+
+.gallery-empty p {
+  margin: 0;
+  color: #6b7280;
+}
+
+@media (max-width: 640px) {
+  .gallery-page {
+    padding-inline: 1rem;
+  }
+
+  .gallery-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .gallery-header p {
+    font-size: .9rem;
+    line-height: 1.2;
+    padding: 0.3rem;
+  }
+
+  .gallery-lightbox-inner {
+    margin-inline: 0.75rem;
+    padding: 1.25rem 1rem 1.5rem;
+  }
+}

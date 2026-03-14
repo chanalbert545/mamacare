@@ -1,0 +1,111 @@
+.donation-page {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background: #fec301;
+  border-radius: 15px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+}
+
+.donation-header h1 {
+  color: #0038a1;
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.donation-header p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.progress-box {
+  background: #f5f7fa;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.progress-wrapper {
+  width: 100%;
+  height: 20px;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #28a745;
+  transition: width 0.5s ease;
+}
+
+..transfer-page {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.transfer-header h1 {
+  color: #0038a1;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.transfer-header p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.transfer-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.transfer-box {
+  flex: 1 1 300px;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  background: #fff;
+  text-align: left;
+}
+
+.transfer-box h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #01933b;
+}
+
+.transfer-box p {
+  color: #505351;
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+.bank-box {
+  border-left: 5px solid #048839;
+}
+
+.momo-box {
+  border-left: 5px solid #28a745;
+}
+
+.page-section {
+  padding: 60px 8%;
+  text-align: center;
+  background-color: #fff;
+  margin-bottom: 60px;
+  border-radius: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+

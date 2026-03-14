@@ -1,0 +1,344 @@
+/* GENERAL PAGE STYLING */
+.standard-page {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+
+.page-container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.page-hero {
+  padding: 100px 0;
+  text-align: center;
+  background: #ffc800;
+}
+
+.page-hero h1 {
+  font-size: 44px;
+  margin-bottom: 12px;
+  color: #0031c4;
+}
+
+.page-hero p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+/* BREADCRUMB */
+.page-hero-breadcrumb {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.page-hero-breadcrumb a {
+  color: #3366ff;
+  text-decoration: none;
+}
+
+.page-hero-breadcrumb span {
+  margin: 0 6px;
+  opacity: 0.6;
+}
+
+/* CARD GRID */
+.classes-grid-section {
+  background: white;
+  padding: 60px 0;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.info-card-primary {
+  background: linear-gradient(115deg, #e7002e 80%, #ffc400 20%);
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+  text-align: center;
+  color: white;
+}
+
+.info-card-primary:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.info-card-primary h3 {
+  margin-bottom: 8px;
+  font-size: 20px;
+  color: rgb(249, 220, 0);
+}
+
+.info-card-primary p {
+  color: rgba(255, 247, 224, 0.95);
+}
+
+.class-activities {
+  margin: 12px 0 0 0;
+  padding: 0 0 0 18px;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  list-style: disc inside;
+}
+.class-activities li {
+  margin-bottom: 3px;
+  opacity: 0.92;
+}
+
+/* IMAGE AREA */
+.card-img-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.card-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+/* FLOATING IMAGE ANIMATION */
+.floating-img {
+  animation: floatAnim 4s ease-in-out infinite, rotateSpin 8s linear infinite;
+}
+
+@keyframes floatAnim {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes rotateSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* IMAGE FADE + SCALE APPEAR */
+.fade-in img {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: imgShow 0.5s ease forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes imgShow {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* HIGHLIGHT BANNER */
+.highlight-banner {
+  text-align: center;
+  width: 100%;
+  height: 320px;
+  padding: 60px 30px;
+  background: linear-gradient(135deg, #f6ac00, #fae422);
+  color: white;
+  border-radius: 20px;
+}
+
+.highlight-banner h2 {
+    padding-top: 20px;
+    color: rgb(31, 52, 211);
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.highlight-banner p {
+  font-size: 18px;
+  opacity: 0.9;
+  color: #747474;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* BUTTONS */
+.banner-actions {
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.banner-actions a {
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.banner-actions a.primary {
+  background: linear-gradient(135deg, #030f96, #124ad7);
+  color: #ffffff;
+}
+
+.banner-actions a.outline {
+  background: transparent;
+  border: 2px solid rgb(8, 43, 156);
+  color: blue;
+}
+
+.banner-actions a:hover {
+  transform: scale(1.07);
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+  .standard-page {
+    gap: 40px;
+  }
+
+  .page-hero {
+    padding: 70px 0;
+  }
+
+  .page-hero h1 {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+
+  .page-hero p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .classes-grid-section {
+    padding: 40px 0;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .info-card-primary {
+    padding: 20px;
+  }
+
+  .card-img {
+    width: 84px;
+    height: 84px;
+  }
+
+  .highlight-banner {
+    height: auto;
+    padding: 40px 18px;
+  }
+
+  .highlight-banner h2 {
+    font-size: 26px;
+  }
+
+  .highlight-banner p {
+    font-size: 16px;
+  }
+
+  .banner-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner-actions a {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-container {
+    width: 92%;
+  }
+
+  .page-hero {
+    padding: 60px 0;
+  }
+
+  .page-hero h1 {
+    font-size: 28px;
+  }
+
+  .page-hero-breadcrumb {
+    font-size: 13px;
+  }
+
+  .info-card-primary h3 {
+    font-size: 18px;
+  }
+
+  .class-activities {
+    font-size: 0.95rem;
+  }
+
+  .highlight-banner {
+    height: auto;
+    padding: 20px 19px;
+  }
+
+  .banner-actions {
+    height: auto;
+    padding: 20px 19px;
+  }
+}
+
+/* SECTION FADE-IN */
+.animate-section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: sectionFade 0.9s ease forwards;
+}
+
+@keyframes sectionFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* PER-CARD STAGGER FADE */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: cardFade 0.6s ease forwards;
+}
+
+@keyframes cardFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* DELAY LAST SECTION */
+.slide-up {
+  animation-delay: 0.4s;
+}
+
+/* PAGE LOAD FADE */
+body {
+  animation: fadeLoad 0.4s ease;
+}
+
+@keyframes fadeLoad {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

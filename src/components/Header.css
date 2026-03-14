@@ -1,0 +1,278 @@
+.site-header {
+  width: 100%;
+  box-shadow: var(--shadow-soft);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--white);
+  padding-top: 0;
+  height: 90px;
+}
+
+.top-bar {
+  background: var(--theme-blue);
+  color: var(--white);
+  font-size: 0.85rem;
+  height:50px;
+  padding-top: 0;
+}
+
+.top-bar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  gap: 1rem;
+}
+
+.top-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.top-bar-item .icon {
+  color: var(--theme-yellow);
+  font-size: 1rem;
+}
+
+
+.top-bar-item .icon img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
+}
+
+.top-bar-item .label {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+}
+
+.top-bar-item a {
+  color: var(--white);
+  transition: opacity 0.2s ease-in-out;
+}
+
+.top-bar-item a:hover {
+  opacity: 0.8;
+}
+
+.top-bar-cta {
+  margin-left: auto;
+  font-weight: 600;
+}
+
+.top-bar-link {
+  color: var(--theme-yellow);
+}
+
+.main-nav {
+  background: var(--white);
+
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0.5rem 1.5rem;
+}
+
+.brand img {
+  max-height: 70px;
+  width: auto;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-weight: 500;
+}
+
+.nav-link {
+  color: var(--theme-dark);
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
+  background: var(--theme-pink);
+  transition: width 0.2s ease-in-out;
+}
+
+.nav-link:hover::after,
+.nav-link.is-active::after {
+  width: 100%;
+}
+
+.nav-link.is-active {
+  color: var(--theme-pink);
+}
+
+.auth-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.auth-links .highlight {
+  color: var(--white);
+  background: var(--theme-pink);
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+}
+
+.logout-link {
+  border: none;
+  background: transparent;
+  color: var(--theme-pink);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(232, 6, 85, 0.15);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.logout-link:hover {
+  background-color: rgba(232, 6, 85, 0.08);
+}
+
+.donate-btn {
+  background: var(--theme-yellow);
+  color: var(--theme-dark);
+  padding: 0.65rem 1.4rem;
+  border-radius: 30px;
+  font-weight: 600;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.2s ease-in-out;
+}
+
+.donate-btn:hover {
+  transform: translateY(-2px);
+}
+
+.mobile-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.mobile-toggle span {
+  width: 24px;
+  height: 2px;
+  background: var(--theme-dark);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.mobile-toggle.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.mobile-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-toggle.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 992px) {
+  .top-bar-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .top-bar-cta {
+    margin-left: 0;
+  }
+
+  .nav-content {
+    position: relative;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 110%;
+    right: 1.5rem;
+    background: var(--white);
+    box-shadow: var(--shadow-soft);
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: min(280px, 80vw);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .nav-menu.is-open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .donate-btn {
+    display: none;
+  }
+}
+
+.mamacare {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .mamacare {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  padding-left: 5rem;
+  padding-bottom: 2rem;
+  font-size: 0.95rem;
+  }
+  .top-bar-content {
+    padding: 0.75rem 0;
+  }
+
+  .top-bar {
+    height: 40px;
+  }
+
+  .top-bar-item  {
+    display: none;
+    display: flexbox;
+    font-size: 0.75rem;
+    line-height: 0.02rem;
+    color: aliceblue;
+  }
+
+  .brand img {
+    max-height: 60px;
+  }
+}
