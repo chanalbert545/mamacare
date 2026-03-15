@@ -34,7 +34,12 @@ function App() {
     <AuthProvider>
       <Router>
         <ScrollToTop />
-        <Suspense fallback={<div className="page-loading">Loading…</div>}>
+        <Suspense fallback={
+          <div className="page-loading">
+            <div className="spinner"></div>
+            <span>Loading…</span>
+          </div>
+        }>
           <Routes>
             <Route path="/" element={withLayout(LandingPage)} />
             <Route path="/home" element={withLayout(HomePage)} />
