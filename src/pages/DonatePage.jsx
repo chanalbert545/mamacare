@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./donation.css";
-import "./SitePageS.css";
+import "./SitePages.css";
 
 export default function DonationPage() {
   const [raised, setRaised] = useState(450); // example
